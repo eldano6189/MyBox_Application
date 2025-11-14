@@ -1,0 +1,38 @@
+.heading {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.heading p:first-of-type {
+  color: var(--font-clr-2);
+}
+
+.container__tray {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1em;
+  padding: 1rem 0;
+}
+
+.tray div {
+  padding: 1rem 0;
+}
+
+.tray div p:last-of-type {
+  color: var(--font-clr-2);
+}
+
+.tray svg {
+  fill: var(--toolbox-clr-bkgrd);
+}
+
+.tray svg path {
+  stroke-width: 1px;
+  stroke: var(--toolbox-clr-slot);
+  cursor: pointer;
+}
+
+.tool {
+  fill: var(--toolbox-clr-slot);
+}

@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.container__head {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container__head li p {
+  color: var(--font-clr-2);
+}
+
+.container__head li h2 {
+  text-transform: uppercase;
+}
+
+.container__tools {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.container__tools li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  padding: 0.75em;
+  border: 1px solid var(--bkgrd-clr-2);
+  border-radius: 0.5rem;
+
+  box-shadow: var(--shadow);
+}

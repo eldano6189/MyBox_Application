@@ -1,0 +1,10 @@
+.container {
+  padding: 1rem;
+  background: var(--bkgrd-clr-2);
+}
+
+.container a {
+  display: inline;
+  color: var(--main-clr);
+  text-decoration: underline;
+}
