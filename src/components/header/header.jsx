@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import LogoIcon from "../../assets/svg/logoIcon/logoIcon";
 import ToolboxIcon from "../../assets/svg/toolboxIcon/toolboxIcon";
 import ChecksIcon from "../../assets/svg/checksIcon/checksIcon";
+import SettingsIcon from "../../assets/svg/settingsIcon/settingsIcon";
 import styles from "./header.module.css";
 
 const Header = () => {
@@ -17,6 +18,11 @@ const Header = () => {
         <li>
           <Link to={"/checkout"}>
             <ChecksIcon />
+          </Link>
+        </li>
+        <li>
+          <Link to={"/settings"}>
+            <SettingsIcon />
           </Link>
         </li>
       </ul>

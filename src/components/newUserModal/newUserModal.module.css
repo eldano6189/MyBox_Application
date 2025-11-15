@@ -1,0 +1,44 @@
+.container {
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.25rem);
+  z-index: 100;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.5rem;
+  background-color: var(--bkgrd-clr-1);
+  border: 1px solid var(--bkgrd-clr-2);
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal {
+    width: 30rem;
+    border-radius: 1rem;
+  }
+}

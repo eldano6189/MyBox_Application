@@ -8,15 +8,26 @@ export const GlobalContextWrapper = ({ children }) => {
     return saved ? JSON.parse(saved) : [];
   });
 
+  const [user, setUser] = useState(() => {
+    const saved = localStorage.getItem("myBoxUser");
+    return saved ? JSON.parse(saved) : {};
+  });
+
   useEffect(() => {
     localStorage.setItem("toolboxChecks", JSON.stringify(allChecks));
   }, [allChecks]);
+
+  useEffect(() => {
+    localStorage.setItem("myBoxUser", JSON.stringify(user));
+  }, [user]);
 
   return (
     <GlobalContextProvider.Provider
       value={{
         allChecks,
         setAllChecks,
+        user,
+        setUser,
       }}
     >
       {children}

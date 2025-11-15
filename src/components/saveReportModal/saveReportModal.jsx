@@ -27,7 +27,6 @@ const SaveReportModal = ({ open, onClose, data }) => {
         toolboxSerNo: details.serNo,
         toolboxNSN: data.nsn,
         toolboxDesc: data.name,
-        checkedBy: details.checker,
         checkedDate: details.date,
         signature: signature,
         tools: currentCheck.tools,
@@ -58,15 +57,7 @@ const SaveReportModal = ({ open, onClose, data }) => {
               }
             />
           </li>
-          <li>
-            <p>Checked by</p>
-            <input
-              type="text"
-              onChange={(e) =>
-                setDetails({ ...details, checker: e.target.value })
-              }
-            />
-          </li>
+
           <li>
             <p>Date</p>
             <input

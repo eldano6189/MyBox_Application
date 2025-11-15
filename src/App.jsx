@@ -7,10 +7,13 @@ import Toolbox from "./pages/toolbox/toolbox";
 import Checkout from "./pages/checkout/checkout";
 import Report from "./pages/report/report";
 import Footer from "./components/footer/footer";
+import Settings from "./pages/settings/settings";
+import NewUserModal from "./components/newUserModal/newUserModal";
 
 const App = () => {
   return (
     <div className="App">
+      <NewUserModal />
       <div className="wrapper">
         <Header />
         <main>
@@ -26,6 +29,7 @@ const App = () => {
             />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/report/:uid" element={<Report />} />
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </main>
         <Footer />

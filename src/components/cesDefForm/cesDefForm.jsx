@@ -1,8 +1,12 @@
 import styles from "./cesDefForm.module.css";
+import { useContext } from "react";
 import Button from "../button/button";
 import { Fragment } from "react";
+import GlobalContextProvider from "../../context/globalContext";
 
 const CESDefForm = ({ data }) => {
+  const { user } = useContext(GlobalContextProvider);
+
   return (
     <div className={styles.container}>
       <div className={styles.paper}>
@@ -190,7 +194,9 @@ const CESDefForm = ({ data }) => {
             </p>
           </li>
           <li>
-            <p className={styles.checkedby}>{data.checkedBy}</p>
+            <p className={styles.checkedby}>
+              {user.servNo} {user.rank} {user.surename}
+            </p>
           </li>
           <li style={{ padding: "0" }}>
             <img
