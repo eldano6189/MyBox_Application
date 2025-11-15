@@ -80,9 +80,7 @@ const Toolbox = () => {
                         fill: handleCheckedToolPrevious(tool) && "none",
                       }}
                       onClick={() => {
-                        if (currentCheck.tools.length < 12) {
-                          handleAddToolModalOpen(tool);
-                        }
+                        handleAddToolModalOpen(tool);
                       }}
                     />
                   );

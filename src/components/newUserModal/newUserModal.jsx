@@ -15,8 +15,6 @@ const NewUserModal = () => {
     navigate("/settings");
   };
 
-  console.log(location);
-
   if (!isNewUser || location.pathname === "/settings") return null;
 
   return (

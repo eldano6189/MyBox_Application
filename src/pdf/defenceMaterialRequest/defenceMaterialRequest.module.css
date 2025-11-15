@@ -1,0 +1,93 @@
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.paper {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 297mm;
+  height: 210mm;
+  padding: 10mm;
+  background-color: #ffffff;
+  margin: auto;
+}
+
+.large {
+  font-size: 14pt;
+  color: #000000;
+  display: inline;
+}
+
+.medium {
+  font-size: 12pt;
+  color: #000000;
+  display: inline;
+}
+
+.small {
+  font-size: 8pt;
+  color: #000000;
+  display: inline;
+}
+
+.head {
+  display: grid;
+  grid-template-rows: 10mm 8mm 8mm 20mm;
+  grid-template-columns: 90mm 38mm 41mm 49mm 59mm;
+}
+
+.head li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #000000;
+  padding: 0 1mm;
+}
+
+.body__headers {
+  display: grid;
+  grid-template-rows: 5mm 5mm;
+  grid-template-columns: repeat(14, 7.5mm) 55mm 14mm 13mm 13mm 10mm 11mm 56mm;
+}
+
+.body__headers li {
+  display: grid;
+  place-items: center;
+  border: 1px solid black;
+}
+
+.body__content {
+  display: grid;
+  grid-template-rows: 8.25mm;
+  grid-template-columns: repeat(14, 7.5mm) 55mm 14mm 13mm 13mm 10mm 11mm 56mm;
+}
+
+.body__content li {
+  display: grid;
+  place-items: center;
+  border: 1px solid black;
+}
+
+.foot {
+  display: grid;
+  grid-template-rows: 16mm 12mm 8mm 8mm;
+  grid-template-columns: 26mm 42mm 30mm 72mm 40mm 67mm;
+}
+
+.foot li {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  padding: 0 1mm;
+}
+
+.foot li svg {
+  margin-right: 1mm;
+}
+
+.signature {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}

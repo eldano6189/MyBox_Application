@@ -1,15 +1,37 @@
-import styles from "./cesDefForm.module.css";
-import { useContext } from "react";
-import Button from "../button/button";
-import { Fragment } from "react";
+import styles from "./cesEquipmentDeficiency.module.css";
+import { useContext, useRef, Fragment } from "react";
+import Button from "../../components/button/button";
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 import GlobalContextProvider from "../../context/globalContext";
 
-const CESDefForm = ({ data }) => {
+const CESEquipmentDeficiency = ({ data }) => {
   const { user } = useContext(GlobalContextProvider);
+  const cedPdfRef = useRef(null);
+
+  const filenameFormat = `${data.checkedDate.replaceAll(
+    "-",
+    ""
+  )}-${data.toolboxSerNo.replaceAll(" ", "").toUpperCase()}_AFB6530`;
+
+  const handleDownload = async () => {
+    const element = cedPdfRef.current;
+    if (!element) return;
+
+    const canvas = await html2canvas(element, { scale: 2 });
+    const imgData = canvas.toDataURL("image/jpeg", 1.0);
+
+    const pdf = new jsPDF("p", "mm", "a4");
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+
+    pdf.addImage(imgData, "JPEG", 0, 0, pageWidth, pageHeight);
+    pdf.save(`${filenameFormat || "report"}.pdf`);
+  };
 
   return (
     <div className={styles.container}>
-      <div className={styles.paper}>
+      <div className={styles.paper} ref={cedPdfRef}>
         <ul className={styles.head}>
           <li style={{ gridColumn: "1 / 6" }}>
             <h1>CES Equipment Deficiency State</h1>
@@ -219,9 +241,9 @@ const CESDefForm = ({ data }) => {
           <li style={{ gridColumn: "7 / 9" }}></li>
         </ul>
       </div>
-      <Button text={"AF B6530"} fill onClick={() => window.print()} />
+      <Button text={`AF B6530 (${data.copy})`} fill onClick={handleDownload} />
     </div>
   );
 };
 
-export default CESDefForm;
+export default CESEquipmentDeficiency;
