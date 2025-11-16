@@ -32,6 +32,9 @@
   padding: 0.75em;
   border: 1px solid var(--bkgrd-clr-2);
   border-radius: 0.5rem;
-
   box-shadow: var(--shadow);
+}
+
+.container__tools li p {
+  text-transform: uppercase;
 }

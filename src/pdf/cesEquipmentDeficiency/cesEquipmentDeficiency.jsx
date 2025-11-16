@@ -12,7 +12,9 @@ const CESEquipmentDeficiency = ({ data }) => {
   const filenameFormat = `${data.checkedDate.replaceAll(
     "-",
     ""
-  )}-${data.toolboxSerNo.replaceAll(" ", "").toUpperCase()}_AFB6530`;
+  )}-${data.toolboxSerNo.replaceAll(" ", "").toUpperCase()}_AFB6530(${
+    data.copy
+  })`;
 
   const handleDownload = async () => {
     const element = cedPdfRef.current;
@@ -126,11 +128,11 @@ const CESEquipmentDeficiency = ({ data }) => {
               </li>
               <li>
                 <p>{tool.toolNSN}</p>
-                <p>{tool.toolDesc}</p>
+                <p>{tool.toolDesc.toUpperCase()}</p>
               </li>
               <li style={{ gridColumn: "3 / 5" }}>
-                <p>Qty 1</p>
-                <p>{tool.status}</p>
+                <p>QTY 1</p>
+                <p>{tool.status.toUpperCase()}</p>
               </li>
               <li style={{ gridColumn: "5 / 7" }}>
                 <p></p>
@@ -152,7 +154,7 @@ const CESEquipmentDeficiency = ({ data }) => {
               </li>
               <li style={{ gridColumn: "3 / 5" }}>
                 <p></p>
-                <p>Complete</p>
+                <p>COMPLETE</p>
               </li>
               <li style={{ gridColumn: "5 / 7" }}>
                 <p></p>
@@ -174,7 +176,7 @@ const CESEquipmentDeficiency = ({ data }) => {
               </li>
               <li style={{ gridColumn: "3 / 5" }}>
                 <p></p>
-                <p>Last Item</p>
+                <p>LAST ITEM</p>
               </li>
               <li style={{ gridColumn: "5 / 7" }}>
                 <p></p>

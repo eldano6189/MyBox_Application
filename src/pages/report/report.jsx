@@ -2,6 +2,7 @@ import styles from "./report.module.css";
 import { useParams } from "react-router";
 import { useContext } from "react";
 import GlobalContext from "../../context/globalContext";
+import Button from "../../components/button/button";
 
 import CESEquipmentDeficiency from "../../pdf/cesEquipmentDeficiency/cesEquipmentDeficiency";
 import DefenceMaterialRequest from "../../pdf/defenceMaterialRequest/defenceMaterialRequest";
@@ -51,10 +52,6 @@ const Report = () => {
           );
         })}
       </ul>
-      {/* <div>
-        <CESEquipmentDeficiency data={report} />
-        <DefenceMaterialRequest data={report} />
-      </div> */}
 
       <div>
         {CEDforms.map((page, i) => (

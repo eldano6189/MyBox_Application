@@ -19,6 +19,10 @@
   animation: slideIn 0.3s ease forwards;
 }
 
+.container__info > * {
+  text-transform: uppercase;
+}
+
 .container__info p {
   color: var(--font-clr-2);
 }

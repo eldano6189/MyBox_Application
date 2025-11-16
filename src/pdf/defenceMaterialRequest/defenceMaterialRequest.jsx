@@ -13,7 +13,9 @@ const DefenceMaterialRequest = ({ data }) => {
   const filenameFormat = `${data.checkedDate.replaceAll(
     "-",
     ""
-  )}-${data.toolboxSerNo.replaceAll(" ", "").toUpperCase()}_MODForm2251`;
+  )}-${data.toolboxSerNo.replaceAll(" ", "").toUpperCase()}_MODForm2251(${
+    data.copy
+  })`;
 
   const handleDownload = async () => {
     const element = dmrPdfRef.current;
@@ -222,7 +224,7 @@ const DefenceMaterialRequest = ({ data }) => {
                   );
                 })}
               <li>
-                <p className={styles.small}>{tool.toolDesc}</p>
+                <p className={styles.small}>{tool.toolDesc.toUpperCase()}</p>
               </li>
               <li></li>
               <li>
@@ -243,7 +245,7 @@ const DefenceMaterialRequest = ({ data }) => {
               return <li key={i}></li>;
             })}
             <li>
-              <p className={styles.small}>Last Item</p>
+              <p className={styles.small}>LAST ITEM</p>
             </li>
             {Array.from({ length: 6 }).map((_, i) => {
               return <li key={i}></li>;

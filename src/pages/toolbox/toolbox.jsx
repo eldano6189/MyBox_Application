@@ -50,12 +50,10 @@ const Toolbox = () => {
         <h1>{toolbox.name}</h1>
         <p>{toolbox.nsn}</p>
         <p>
-          Selecting a tool will allow you to add it to the Army Form B6530, you
-          will also have the option to select if it is missing or damaged.
-        </p>
-        <p>
-          Note: You can only select 12 tools per sheet, to continue you must
-          save and start a new check.
+          Select a tool &gt; select if missing or damaged &gt; add to report,
+          its that simple! Once you are complete and save the report, you will
+          have the option to download a copy of either the MOD Form 2251 or Army
+          Form B6530.
         </p>
       </div>
       <ul className={styles.container__tray}>

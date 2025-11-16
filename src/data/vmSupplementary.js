@@ -836,7 +836,7 @@ export const vmSupplementary = [
 
           {
             toolID: 15,
-            toolNSN: "N/K",
+            toolNSN: "UNKNOWN-PART-NO",
             toolDesc: "Circlip Plier bits",
             toolQty: "1",
             toolPath:
