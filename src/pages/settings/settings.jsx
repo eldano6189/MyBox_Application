@@ -65,7 +65,7 @@ const Settings = () => {
             <h2>{user.rank}</h2>
           </div>
           <div className={styles.form__item}>
-            <p>Surename*</p>
+            <p>Surname*</p>
             <h2>{user.surename}</h2>
           </div>
           <div className={styles.form__item}>
