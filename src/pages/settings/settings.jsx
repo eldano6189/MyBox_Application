@@ -40,7 +40,7 @@ const Settings = () => {
             <input required name="rank" defaultValue={user.rank} type="text" />
           </div>
           <div className={styles.form__item}>
-            <p>Surename*</p>
+            <p>Surname*</p>
             <input
               required
               name="surename"

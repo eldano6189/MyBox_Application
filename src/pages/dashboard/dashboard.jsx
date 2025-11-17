@@ -10,7 +10,7 @@ const Dashboard = () => {
     <div className={styles.container}>
       <h1>Welcome to MyBox!</h1>
       <p>
-        Your essential tool managgment companion. Select a toolbox, log your
+        Your essential tool management companion. Select a toolbox, log your
         check, and generate forms with ease.
       </p>
 
