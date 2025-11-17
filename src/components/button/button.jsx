@@ -6,7 +6,7 @@ const Button = ({ text, fill, onClick }) => {
       className={styles.btn}
       onClick={onClick}
       style={{
-        background: fill && "var(--main-clr)",
+        background: !fill && "var(--bkgrd-clr-2)",
       }}
     >
       <p

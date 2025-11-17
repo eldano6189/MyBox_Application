@@ -5,7 +5,7 @@
   border-radius: 0.5rem;
   outline: none;
   border: none;
-  background: var(--bkgrd-clr-2);
+  background: linear-gradient(135deg, var(--main-clr), var(--toolbox-clr-slot));
   cursor: pointer;
   box-shadow: var(--shadow);
 }

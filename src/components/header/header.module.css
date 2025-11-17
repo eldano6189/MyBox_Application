@@ -22,6 +22,15 @@
 
 .container ul li {
   height: 100%;
+  border-radius: 50%;
+}
+
+.active {
+  background-color: var(--bkgrd-clr-1);
+}
+
+.active a svg path {
+  fill: var(--main-clr) !important;
 }
 
 .container ul li a {
@@ -41,3 +50,4 @@
 .container ul li a svg path {
   fill: var(--bkgrd-clr-1);
 }
+
