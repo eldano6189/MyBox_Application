@@ -1,7 +1,7 @@
 .heading {
   display: grid;
   gap: 0.5rem;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .heading p:first-of-type {
@@ -34,5 +34,5 @@
 }
 
 .tool {
-  fill: var(--toolbox-clr-slot);
+  fill: var(--toolbox-clr-bkgrd);
 }

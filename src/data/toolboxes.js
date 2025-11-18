@@ -1,5 +1,8 @@
 import { vmBasic } from "./vmBasic";
 import { vmSupplementary } from "./vmSupplementary";
+import ToolboxIcon from "../assets/svg/toolboxIcon/toolboxIcon";
+import ToolboxSuppIcon from "../assets/svg/toolboxIcon/toolboxSuppIcon";
+import ToolboxArmrIcon from "../assets/svg/toolboxIcon/toolboxArmrIcon";
 
 export const toolboxes = [
   {
@@ -8,6 +11,7 @@ export const toolboxes = [
     nsn: "5140-99-490-3944",
     data: vmBasic,
     available: true,
+    icon: ToolboxIcon,
   },
   {
     name: "VM Supplementary",
@@ -15,6 +19,7 @@ export const toolboxes = [
     nsn: "5180-99-436-9136",
     data: vmSupplementary,
     available: true,
+    icon: ToolboxSuppIcon,
   },
   {
     name: "Armourer Toolbox",
@@ -22,5 +27,6 @@ export const toolboxes = [
     nsn: "5180-99-490-4205",
     data: null,
     available: false,
+    icon: ToolboxArmrIcon,
   },
 ];

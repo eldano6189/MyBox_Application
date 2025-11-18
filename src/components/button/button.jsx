@@ -9,13 +9,7 @@ const Button = ({ text, fill, onClick }) => {
         background: !fill && "var(--bkgrd-clr-2)",
       }}
     >
-      <p
-        style={{
-          color: fill && "var(--bkgrd-clr-1)",
-        }}
-      >
-        {text}
-      </p>
+      <p>{text}</p>
     </button>
   );
 };

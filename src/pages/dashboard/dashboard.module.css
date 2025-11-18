@@ -1,5 +1,5 @@
 .container {
-  padding: 1rem 0;
+  padding: 1rem;
   display: grid;
   gap: 1rem;
 }
@@ -24,6 +24,7 @@
 }
 
 .container__img {
+  position: relative;
   display: grid;
   place-items: center;
   height: 100%;
@@ -32,9 +33,26 @@
   border-radius: 0.25rem;
 }
 
+.container__img::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-clr);
+}
+
 .container__img svg {
+  position: relative;
+  z-index: 1;
   height: 1rem;
   width: auto;
+}
+
+.container__img svg path {
+  fill: var(--font-clr-1);
 }
 
 .container__text {

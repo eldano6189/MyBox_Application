@@ -17,6 +17,7 @@ const Dashboard = () => {
       <h2>Select a box</h2>
       <ul>
         {toolboxes.map((box, i) => {
+          const Icon = box.icon;
           return (
             <li key={i}>
               <Link
@@ -24,7 +25,7 @@ const Dashboard = () => {
                 className={styles.container__link}
               >
                 <div className={styles.container__img}>
-                  <ToolboxIcon />
+                  <Icon />
                 </div>
                 <div className={styles.container__text}>
                   <p>{box.name}</p>

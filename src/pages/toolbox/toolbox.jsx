@@ -75,7 +75,9 @@ const Toolbox = () => {
                       style={{
                         pointerEvents:
                           handleCheckedToolPrevious(tool) && "none",
-                        fill: handleCheckedToolPrevious(tool) && "none",
+                        fill:
+                          handleCheckedToolPrevious(tool) &&
+                          "var(--toolbox-clr-slot)",
                       }}
                       onClick={() => {
                         handleAddToolModalOpen(tool);

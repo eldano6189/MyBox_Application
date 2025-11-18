@@ -2,28 +2,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 :root {
-  --bkgrd-clr-1: rgb(35, 35, 35);
-  --bkgrd-clr-2: rgb(57, 55, 59);
-  --font-clr-1: rgb(229, 229, 229);
-  --font-clr-2: rgb(165, 165, 165);
-  --main-clr: rgb(235, 255, 87);
-  --success-clr-1: rgb(235, 255, 87);
-  --success-clr-2: rgb(127, 139, 31);
-  --toolbox-clr-slot: rgb(233, 233, 35);
-  --toolbox-clr-bkgrd: rgb(22, 22, 22);
+  --bkgrd-clr-1: rgb(255, 255, 255);
+  --bkgrd-clr-2: rgb(246, 246, 246);
+  --font-clr-1: rgb(29, 29, 29);
+  --font-clr-2: rgb(33, 37, 35);
+  --main-clr: rgb(255, 211, 00);
+  --success-clr-1: rgb(47, 129, 140);
+  --success-clr-2: rgb(79, 192, 207);
+  --toolbox-clr-slot: rgb(255, 211, 00);
+  --toolbox-clr-bkgrd: rgb(33, 37, 35);
   --shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.1);
-}
-
-.App {
-  background: linear-gradient(
-    180deg,
-    var(--main-clr),
-    var(--bkgrd-clr-2) 12rem
-  );
 }
 
 .wrapper {
@@ -64,7 +56,7 @@ h5,
 h6 {
   font-size: 1rem;
   color: var(--font-clr-1);
-  letter-spacing: -0.05rem;
+  letter-spacing: 0.05rem;
 }
 
 p,
@@ -72,5 +64,5 @@ a,
 input {
   font-size: 0.8rem;
   color: var(--font-clr-1);
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.05rem;
 }

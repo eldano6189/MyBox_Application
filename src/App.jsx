@@ -9,10 +9,12 @@ import Report from "./pages/report/report";
 import Footer from "./components/footer/footer";
 import Settings from "./pages/settings/settings";
 import NewUserModal from "./components/newUserModal/newUserModal";
+import Background from "./components/background/background";
 
 const App = () => {
   return (
     <div className="App">
+      <Background />
       <NewUserModal />
       <div className="wrapper">
         <Header />

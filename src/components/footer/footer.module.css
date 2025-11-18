@@ -5,6 +5,6 @@
 
 .container a {
   display: inline;
-  color: var(--main-clr);
+  color: var(--success-clr-1);
   text-decoration: underline;
 }

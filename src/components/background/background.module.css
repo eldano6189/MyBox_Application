@@ -1,0 +1,11 @@
+.container {
+  position: fixed;
+  inset: 0;
+  height: 100dvh;
+  background: linear-gradient(
+    180deg,
+    var(--main-clr),
+    var(--bkgrd-clr-2) 12rem
+  );
+  z-index: -1;
+}
