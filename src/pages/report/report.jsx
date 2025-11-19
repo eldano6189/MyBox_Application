@@ -40,19 +40,6 @@ const Report = () => {
           <p>Total issues: {report.tools.length}</p>
         </li>
       </ul>
-      <ul className={styles.container__tools}>
-        {report.tools.map((tool, i) => {
-          return (
-            <li key={i}>
-              <p>{tool.toolDesc}</p>
-              <p>{tool.toolNSN}</p>
-              <p>{tool.status}</p>
-              <p>Qty: {tool.toolQty}</p>
-            </li>
-          );
-        })}
-      </ul>
-
       <div>
         {CEDforms.map((page, i) => (
           <CESEquipmentDeficiency
@@ -67,6 +54,18 @@ const Report = () => {
           />
         ))}
       </div>
+      <ul className={styles.container__tools}>
+        {report.tools.map((tool, i) => {
+          return (
+            <li key={i}>
+              <p>{tool.toolDesc}</p>
+              <p>{tool.toolNSN}</p>
+              <p>{tool.status}</p>
+              <p>Qty: {tool.toolQty}</p>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

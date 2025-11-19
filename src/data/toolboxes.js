@@ -29,4 +29,12 @@ export const toolboxes = [
     available: false,
     icon: ToolboxArmrIcon,
   },
+  {
+    name: "Halfords Advanced Toolbox",
+    url: "halfordstoolbox",
+    nsn: "0000-00-000-0000",
+    data: null,
+    available: false,
+    icon: ToolboxSuppIcon,
+  },
 ];

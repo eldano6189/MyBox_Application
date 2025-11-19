@@ -24,7 +24,7 @@ const Checkout = () => {
             .sort((a, b) => (a.checkedDate < b.checkedDate ? 1 : -1))
             .map((check, i) => {
               return (
-                <li key={i}>
+                <li key={i} style={{ animationDelay: `0.${i}s` }}>
                   <Link
                     to={`/report/${check.uid}`}
                     className={styles.container__link}

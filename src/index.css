@@ -10,9 +10,9 @@
   --bkgrd-clr-2: rgb(246, 246, 246);
   --font-clr-1: rgb(29, 29, 29);
   --font-clr-2: rgb(33, 37, 35);
-  --main-clr: rgb(255, 211, 00);
-  --success-clr-1: rgb(47, 129, 140);
-  --success-clr-2: rgb(79, 192, 207);
+  --main-clr: rgb(255, 211, 0);
+  --success-clr-1: rgb(41, 153, 167);
+  --success-clr-2: rgb(117, 229, 244);
   --toolbox-clr-slot: rgb(255, 211, 00);
   --toolbox-clr-bkgrd: rgb(33, 37, 35);
   --shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.1);
@@ -66,4 +66,3 @@ input {
   color: var(--font-clr-1);
   letter-spacing: 0.05rem;
 }
-

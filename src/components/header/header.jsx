@@ -4,6 +4,7 @@ import ToolboxIcon from "../../assets/svg/toolboxIcon/toolboxIcon";
 import ChecksIcon from "../../assets/svg/checksIcon/checksIcon";
 import SettingsIcon from "../../assets/svg/settingsIcon/settingsIcon";
 import styles from "./header.module.css";
+import FestiveLogo from "../../assets/svg/festiveLogo";
 
 const Header = () => {
   const navLinks = [
@@ -14,7 +15,11 @@ const Header = () => {
 
   return (
     <header className={styles.container}>
-      <LogoIcon />
+      <div className={styles.logo}>
+        {/* <LogoIcon /> */}
+        <FestiveLogo />
+      </div>
+
       <ul>
         {navLinks.map((link, i) => (
           <li key={i}>
