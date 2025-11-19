@@ -19,7 +19,7 @@ const Dashboard = () => {
         {toolboxes.map((box, i) => {
           const Icon = box.icon;
           return (
-            <li key={i}>
+            <li key={i} style={{animationDelay: `0.${i}s`}}>
               <Link
                 to={box.available ? `/toolbox/${box.url}` : "/"}
                 className={styles.container__link}

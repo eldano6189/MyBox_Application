@@ -56,7 +56,7 @@ h5,
 h6 {
   font-size: 1rem;
   color: var(--font-clr-1);
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.025rem;
 }
 
 p,
@@ -66,3 +66,4 @@ input {
   color: var(--font-clr-1);
   letter-spacing: 0.05rem;
 }
+

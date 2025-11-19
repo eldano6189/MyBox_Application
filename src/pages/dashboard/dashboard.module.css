@@ -8,13 +8,16 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 30rem));
   gap: 1em;
+  overflow: hidden;
 }
 
 .container ul li {
   border: 1px solid var(--bkgrd-clr-2);
   border-radius: 0.5rem;
-  height: 4rem;
   box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateX(-1rem);
+  animation: card-slide-in 0.3s ease forwards;
 }
 
 .container ul li a {
@@ -31,6 +34,7 @@
   aspect-ratio: 1;
   background: var(--bkgrd-clr-2);
   border-radius: 0.25rem;
+  box-shadow: inset var(--shadow);
 }
 
 .container__img::after {
@@ -71,8 +75,16 @@
   place-items: center;
   height: 100%;
   aspect-ratio: 1;
+  
 }
 
 .container__arrow svg {
   height: 1rem;
+}
+
+@keyframes card-slide-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
