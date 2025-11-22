@@ -1,5 +1,6 @@
 import { vmBasic } from "./vmBasic";
 import { vmSupplementary } from "./vmSupplementary";
+import { halfordsAdvanced } from "./halfordsAdvanced";
 import ToolboxIcon from "../assets/svg/toolboxIcon/toolboxIcon";
 import ToolboxSuppIcon from "../assets/svg/toolboxIcon/toolboxSuppIcon";
 import ToolboxArmrIcon from "../assets/svg/toolboxIcon/toolboxArmrIcon";
@@ -32,9 +33,9 @@ export const toolboxes = [
   {
     name: "Halfords Advanced Toolbox",
     url: "halfordstoolbox",
-    nsn: "0000-00-000-0000",
-    data: null,
-    available: false,
+    nsn: "Local purchase - Checks only",
+    data: halfordsAdvanced,
+    available: true,
     icon: ToolboxSuppIcon,
   },
 ];
