@@ -1,4 +1,5 @@
 {
+  "version": "0.0.1",
   "name": "MyBox",
   "short_name": "MyBox",
   "description": "A tool-checking application used to record missing or damaged tools and generate Army Form B6530 reports.",
