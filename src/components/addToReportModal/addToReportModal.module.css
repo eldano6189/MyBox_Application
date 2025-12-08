@@ -27,7 +27,7 @@
   color: var(--font-clr-2);
 }
 
-.container__toggle {
+/* .container__toggle {
   display: flex;
   align-items: center;
 }
@@ -79,7 +79,36 @@
   border-radius: 50%;
   background: var(--main-clr);
   transition: all 0.3s ease;
+} */
+
+.container__toggle {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  cursor: pointer;
 }
+
+.container__toggle > p {
+  flex: 1 1;
+  text-align: center;
+}
+
+.toggle__slider {
+position: absolute;
+top: 0;
+left: 0;
+width: 50%;
+height: 100%;
+background: var(--main-clr);
+z-index: -1;
+transition: all 0.3s ease;
+}
+
+
 
 @keyframes slideIn {
   from {

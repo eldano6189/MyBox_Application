@@ -42,7 +42,7 @@ const AddToReportModal = ({ open, onClose, data }) => {
           <p>Qty {data.toolQty}</p>
         </div>
 
-        <div className={styles.container__toggle}>
+        {/* <div className={styles.container__toggle}>
           <div className={styles.toggle__img}>
             {toggle ? <BrokenIcon /> : <MissingIcon />}
           </div>
@@ -60,7 +60,14 @@ const AddToReportModal = ({ open, onClose, data }) => {
               ></div>
             </button>
           </div>
+        </div> */}
+
+        <div className={styles.container__toggle} onClick={() => setToggle(!toggle)}>
+          <div className={styles.toggle__slider} style={{ transform: toggle && "translateX(100%)" }}></div>
+          <p>Damaged</p>
+          <p>Lost</p>
         </div>
+
 
         <div className={styles.container__buttons}>
           <Button text={"Cancel"} onClick={handleCloseModal} />
