@@ -16,8 +16,8 @@ const Header = () => {
   return (
     <header className={styles.container}>
       <div className={styles.logo}>
-        {/* <LogoIcon /> */}
-        <FestiveLogo />
+        <LogoIcon />
+        {/*<FestiveLogo /> */}
       </div>
 
       <ul>
