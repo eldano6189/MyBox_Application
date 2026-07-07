@@ -73,8 +73,6 @@ const Toolbox = () => {
                       className={styles.tool}
                       d={tool.toolPath}
                       style={{
-                        pointerEvents:
-                          handleCheckedToolPrevious(tool) && "none",
                         fill:
                           handleCheckedToolPrevious(tool) &&
                           "var(--toolbox-clr-slot)",

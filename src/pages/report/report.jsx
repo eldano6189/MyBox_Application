@@ -1,15 +1,15 @@
 import styles from "./report.module.css";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import { useContext } from "react";
 import GlobalContext from "../../context/globalContext";
-import Button from "../../components/button/button";
 
 import CESEquipmentDeficiency from "../../pdf/cesEquipmentDeficiency/cesEquipmentDeficiency";
 import DefenceMaterialRequest from "../../pdf/defenceMaterialRequest/defenceMaterialRequest";
 
 const Report = () => {
   const { uid } = useParams();
-  const { allChecks } = useContext(GlobalContext);
+  const { allChecks, setAllChecks } = useContext(GlobalContext);
+  const navigate = useNavigate();
   const report = allChecks.find((r) => String(r.uid) === String(uid));
 
   const CED_PDF_LIMIT = 12;
@@ -26,6 +26,15 @@ const Report = () => {
 
   const CEDforms = chunkArray(report.tools, CED_PDF_LIMIT);
   const DMRforms = chunkArray(report.tools, DMR_PDF_LIMIT);
+
+  const handleDelete = () => {
+    const updatedChecks = allChecks.filter(
+      (item) => String(item.uid) !== String(uid),
+    );
+    setAllChecks(updatedChecks);
+    localStorage.setItem("allChecks", JSON.stringify(updatedChecks));
+    navigate("/checkout");
+  };
 
   return (
     <div className={styles.container}>
@@ -65,6 +74,11 @@ const Report = () => {
             </li>
           );
         })}
+        <li>
+          <button onClick={handleDelete}>
+            <p>Delete</p>
+          </button>
+        </li>
       </ul>
     </div>
   );

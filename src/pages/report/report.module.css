@@ -35,6 +35,21 @@
   box-shadow: var(--shadow);
 }
 
+.container__tools li:last-of-type {
+  padding: 0;
+  gap: 0;
+  box-shadow: none;
+}
+
+.container__tools li:last-of-type button {
+  background-color: var(--error-clr-1);
+  color: var(--font-clr-2);
+  border: none;
+  padding: 0.75em;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+}
+
 .container__tools li p {
   text-transform: uppercase;
 }

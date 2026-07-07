@@ -1,13 +1,17 @@
 import { useState, useContext } from "react";
 import CurrentToolCheckContextProvider from "../../context/currentToolCheckContext";
 import Button from "../button/button";
-import MissingIcon from "../../assets/svg/missingIcon/missingIcon";
-import BrokenIcon from "../../assets/svg/brokenIcon/brokenIcon";
 import styles from "./addToReportModal.module.css";
 
 const AddToReportModal = ({ open, onClose, data }) => {
-  const { setCurrentCheck } = useContext(CurrentToolCheckContextProvider);
+  const { currentCheck, setCurrentCheck } = useContext(
+    CurrentToolCheckContextProvider,
+  );
   const [toggle, setToggle] = useState(false);
+
+  const existingTool = currentCheck.tools.find(
+    (t) => t.toolPath === data.toolPath,
+  );
 
   const handleCloseModal = () => {
     onClose?.();
@@ -31,6 +35,15 @@ const AddToReportModal = ({ open, onClose, data }) => {
     handleCloseModal();
   };
 
+  const handleRemoveTool = () => {
+    setCurrentCheck((prev) => ({
+      ...prev,
+      tools: prev.tools.filter((t) => t.toolPath !== data.toolPath),
+    }));
+
+    handleCloseModal();
+  };
+
   if (!open) return null;
 
   return (
@@ -41,37 +54,27 @@ const AddToReportModal = ({ open, onClose, data }) => {
           <p>{data.toolNSN}</p>
           <p>Qty {data.toolQty}</p>
         </div>
-
-        {/* <div className={styles.container__toggle}>
-          <div className={styles.toggle__img}>
-            {toggle ? <BrokenIcon /> : <MissingIcon />}
-          </div>
-          <div className={styles.toggle__text}>
-            <p>Mark as {toggle ? "Damaged" : "Missing"}</p>
-          </div>
+        {!existingTool && (
           <div
-            className={styles.toggle__button}
+            className={styles.container__toggle}
             onClick={() => setToggle(!toggle)}
           >
-            <button className={styles.toggle}>
-              <div
-                className={styles.slider}
-                style={{ transform: toggle && "translateX(0.75rem)" }}
-              ></div>
-            </button>
+            <div
+              className={styles.toggle__slider}
+              style={{ transform: toggle && "translateX(100%)" }}
+            ></div>
+            <p>Damaged</p>
+            <p>Lost</p>
           </div>
-        </div> */}
-
-        <div className={styles.container__toggle} onClick={() => setToggle(!toggle)}>
-          <div className={styles.toggle__slider} style={{ transform: toggle && "translateX(100%)" }}></div>
-          <p>Damaged</p>
-          <p>Lost</p>
-        </div>
-
+        )}
 
         <div className={styles.container__buttons}>
           <Button text={"Cancel"} onClick={handleCloseModal} />
-          <Button text={"Confirm"} fill onClick={() => handleAddTool(data)} />
+          {existingTool ? (
+            <Button text={"Remove"} fill onClick={handleRemoveTool} />
+          ) : (
+            <Button text={"Confirm"} fill onClick={() => handleAddTool(data)} />
+          )}
         </div>
       </div>
     </div>
