@@ -24,6 +24,9 @@ const Settings = () => {
     <div className={styles.container}>
       <h1>Your details</h1>
       <p>Please fill in the details below to allow use of this application.</p>
+      <p>
+        This data is not saved to a database and only visable on your device.
+      </p>
       {edit ? (
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.form__item}>

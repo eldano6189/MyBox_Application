@@ -1,17 +1,24 @@
 .container {
-  padding: 1rem;
+  padding: 0.5rem;
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.gridWrapper {
+  display: grid;
+  gap: 0.5rem;
 }
 
 .container ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 30rem));
-  gap: 1em;
+  gap: 0.5em;
 }
 
 .container ul li {
-  border: 1px solid var(--bkgrd-clr-2);
+  position: relative;
+  min-height: 5.5rem;
+  border: 1px solid var(--border-clr-main);
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
   opacity: 0;
@@ -32,6 +39,7 @@
   height: 2.5rem;
   aspect-ratio: 1;
   background: var(--bkgrd-clr-2);
+  border: 1px solid var(--border-clr-main);
   border-radius: 0.25rem;
   box-shadow: inset var(--shadow);
 }
@@ -62,22 +70,26 @@
   flex: 1 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  font-weight: bold;
 }
 
 .container__text p:last-of-type {
   color: var(--font-clr-2);
+  font-weight: 300;
 }
 
 .container__arrow {
+  position: absolute;
+  bottom: 0.5em;
+  right: -0.75em;
   display: grid;
   place-items: center;
-  height: 100%;
-  aspect-ratio: 1;
 }
 
 .container__arrow svg {
-  height: 1rem;
+  height: 1.25rem;
+  filter: drop-shadow(var(--shadow));
 }
 
 @keyframes card-slide-in {

@@ -11,12 +11,13 @@
   --font-clr-1: rgb(29, 29, 29);
   --font-clr-2: rgb(33, 37, 35);
   --main-clr: rgb(255, 211, 0);
+  --border-clr-main: rgb(236, 230, 230);
   --success-clr-1: rgb(41, 153, 167);
   --success-clr-2: rgb(117, 229, 244);
   --error-clr-1: rgb(254, 150, 145);
   --toolbox-clr-slot: rgb(255, 211, 00);
   --toolbox-clr-bkgrd: rgb(33, 37, 35);
-  --shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  --shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.05);
 }
 
 .wrapper {
@@ -33,7 +34,7 @@ main {
   flex: 1 1;
   background: var(--bkgrd-clr-1);
   padding: 1rem;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 1.5rem 1.5rem 0 0;
   box-shadow: 0 -0.25rem 0.25rem rgba(0, 0, 0, 0.05);
 }
 
