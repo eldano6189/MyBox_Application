@@ -1,3 +1,4 @@
+import { vmKit } from "./vmKit";
 import { vmBasic } from "./vmBasic";
 import { vmSupplementary } from "./vmSupplementary";
 import { halfordsAdvanced } from "./halfordsAdvanced";
@@ -6,6 +7,14 @@ import ToolboxSuppIcon from "../assets/svg/toolboxIcon/toolboxSuppIcon";
 import ToolboxArmrIcon from "../assets/svg/toolboxIcon/toolboxArmrIcon";
 
 export const toolboxes = [
+  {
+    name: "VM Kit",
+    url: "vmkit",
+    nsn: "5180-99-959-7264",
+    data: vmKit,
+    available: true,
+    icon: ToolboxIcon,
+  },
   {
     name: "VM Basic",
     url: "vmbasic",
